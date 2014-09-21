@@ -9,7 +9,10 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/groovy" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/functional/groovy" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/functional/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/functional/resources" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/resources" type="java-test-resource" />
       <excludeFolder url="file://$MODULE_DIR$/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/build" />
@@ -44,6 +47,9 @@
     <orderEntry type="library" exported="" name="Gradle: javassist-3.18.1-GA" level="project" />
     <orderEntry type="library" exported="" name="Gradle: javax.inject-1" level="project" />
     <orderEntry type="library" exported="" name="Gradle: log4j-1.2.17" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: junit-4.11" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: hamcrest-core-1.3" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: hamcrest-all-1.3" level="project" />
   </component>
 </module>
 
