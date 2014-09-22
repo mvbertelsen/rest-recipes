@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<html ng-app="recipesApp">
-<head lang="en">
+<html lang="en" ng-app="recipesApp">
+<head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Recipes On Rest</title>
-    <script src="js/components/angular/angular.min.js"></script>
-    <script src="js/components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="components/angular/angular.min.js"></script>
+    <script src="components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
     <script src="js/app/recipes.js"></script>
-    <link href="css/bootstrap/bootstrap.css" rel="stylesheet"/>
+    <link href="components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
 </head>
 <body>
-
+    <div>
+        <label>Hello:</label>
+        <input type="text" ng-model="salutation"/>
+    </div>
+    <p>Hello, {{salutation}} <span ng-show="salutation">!</span></p>
 </body>
 </html>
