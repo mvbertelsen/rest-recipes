@@ -38,29 +38,45 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-        </div><!--/.nav-collapse -->
+        </div>
+        <!--/.nav-collapse -->
     </div>
 </div>
 
 <div class="container">
 
-    <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+    <div class="recipe-list" ng-controller="RecipeListController">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="recipe in recipes">
+                    <td>{{recipe.id}}</td>
+                    <td>{{recipe.name}}</td>
+                    <td>{{recipe.description}}</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
-</div><!-- /.container -->
+</div>
+<!-- /.container -->
 
-    <!-- javascript loads last for quick page viewing -->
+<!-- javascript loads last for quick page viewing -->
 
-    <!-- js libs -->
-    <script src="components/jquery/dist/jquery.min.js"></script>
-    <script src="components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="components/angular/angular.min.js"></script>
-    <script src="components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+<!-- js libs -->
+<script src="components/jquery/dist/jquery.min.js"></script>
+<script src="components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="components/angular/angular.min.js"></script>
+<script src="components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 
-    <!-- our js -->
-    <script src="js/app/recipes.js"></script>
+<!-- our js -->
+<script src="js/app/recipes.js"></script>
 
 </body>
 </html>
