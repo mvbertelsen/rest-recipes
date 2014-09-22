@@ -44,9 +44,15 @@ task functional(type: Test) {
     classpath = sourceSets.functional.runtimeClasspath
 }
 
-jettyRun.daemon = true
-[jettyRun, jettyStop]*.stopPort = 8090
-[jettyRun, jettyStop]*.stopKey = 'arglebargle'
+jettyRun.with {
+    daemon = true
+    webDefaultXml = file("${project.webAppDir}/WEB-INF/jetty-webdefault.xml")
+}
+
+[jettyRun, jettyRunWar,jettyStop]*.with {
+    stopPort = 8090
+    stopKey = 'arglebargle'
+}
 
 functional.dependsOn jettyRun
 functional.finalizedBy jettyStop
