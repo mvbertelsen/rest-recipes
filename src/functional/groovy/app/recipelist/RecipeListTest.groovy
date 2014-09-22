@@ -1,5 +1,7 @@
 package app.recipelist
 
+import app.common.SeleniumTestBase
+import app.page.RecipeListPage
 import org.junit.After
 import org.junit.AfterClass
 import org.junit.Before
@@ -11,30 +13,21 @@ import org.openqa.selenium.WebElement
 import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.chrome.ChromeOptions
 
-import static org.junit.Assert.assertNotNull
+import static org.junit.Assert.*
+import static org.hamcrest.CoreMatchers.*
 
-class RecipeListTest {
-    private static WebDriver driver
-
-    @BeforeClass
-    public static void setUpDriver() {
-        System.setProperty("webdriver.chrome.driver", "./chromedriver.exe")
-        ChromeOptions options = new ChromeOptions()
-        options.setExperimentalOption("excludeSwitches",
-                Arrays.asList("ignore-certificate-errors"));
-        driver = new ChromeDriver(options)
-    }
-
-    @AfterClass
-    public static void tearDownDriver() {
-        driver.quit()
-    }
+class RecipeListTest extends SeleniumTestBase {
 
     @Test
     public void shouldListSomeRecipes() {
         driver.get('http://localhost:8080/rest-recipes/')
-        WebElement recipeListDiv = this.driver.findElement(By.cssSelector('div.recipe-list'));
+        RecipeListPage recipeListPage = new RecipeListPage(driver)
 
-        assertNotNull recipeListDiv
+        assertThat recipeListPage.recipeData, is([
+                ['1', 'Macaroni and Cheese', 'Cheesy goodness'],
+                ['2', 'Sausages with Sauerkraut Potato Hash', 'Comfort food, Mattias-style'],
+                ['3', 'Chicken Noodle Soup', 'For the soul!']
+        ])
     }
+
 }

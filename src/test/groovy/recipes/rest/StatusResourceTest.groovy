@@ -2,8 +2,8 @@ package recipes.rest
 
 import org.junit.Test
 
+import static org.hamcrest.CoreMatchers.equalTo
 import static org.hamcrest.MatcherAssert.assertThat
-import static org.hamcrest.CoreMatchers.is as IS
 
 class StatusResourceTest {
 
@@ -11,6 +11,6 @@ class StatusResourceTest {
 
     @Test
     public void getStatusReturnsVersion() {
-        assertThat statusResource.status.version, IS("1.0")
+        assertThat statusResource.status.version, equalTo("1.0")
     }
 }

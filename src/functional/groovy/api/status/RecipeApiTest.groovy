@@ -5,7 +5,6 @@ import org.junit.Test
 import org.unitils.reflectionassert.ReflectionAssert
 import recipes.resources.Recipe
 
-import javax.ws.rs.client.WebTarget
 import javax.ws.rs.core.GenericType
 import javax.ws.rs.core.MediaType
 

@@ -8,7 +8,7 @@ import recipes.resources.Status
 import javax.ws.rs.client.WebTarget
 import javax.ws.rs.core.MediaType
 
-import static org.hamcrest.CoreMatchers.is as IS
+import static org.hamcrest.CoreMatchers.equalTo
 import static org.junit.Assert.assertThat
 
 class StatusApiTest extends ApiTestBase {
@@ -24,6 +24,6 @@ class StatusApiTest extends ApiTestBase {
                 .accept(MediaType.APPLICATION_JSON)
                 .buildGet()
                 .invoke(Status)
-        assertThat status.version, IS("1.0")
+        assertThat status.version, equalTo("1.0")
     }
 }
