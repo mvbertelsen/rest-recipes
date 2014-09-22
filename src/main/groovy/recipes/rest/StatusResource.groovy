@@ -7,14 +7,12 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-@Path("/status")
+@Path('/v1/status')
 public class StatusResource {
 
     @GET
     @Produces(value = MediaType.APPLICATION_JSON)
     public Status getStatus() {
-        Status status = new Status();
-        status.setVersion("1.0");
-        return status;
+        new Status( version: '1.0')
     }
 }
