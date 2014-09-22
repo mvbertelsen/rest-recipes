@@ -2,6 +2,8 @@
 angular.module('recipesApp')
     .controller('RecipeListCtrl', ['$scope', 'RecipeSvc', function($scope, RecipeSvc) {
 
-    $scope.recipes = RecipeSvc.getRecipes();
+    RecipeSvc.getRecipes(function(data) {
+        $scope.recipes = data;
+    });
 
 }]);
