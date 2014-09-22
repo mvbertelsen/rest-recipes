@@ -1,0 +1,4 @@
+
+* Install gradle-compass plugin
+    https://github.com/robfletcher/gradle-compass
+
