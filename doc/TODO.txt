@@ -2,3 +2,8 @@
 * Install gradle-compass plugin
     https://github.com/robfletcher/gradle-compass
 
+* switch to using a promise in the service instead of a callback
+
+* Add javascript tests - Karma/Jasmine
+
+

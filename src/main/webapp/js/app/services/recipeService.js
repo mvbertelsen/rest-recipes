@@ -1,6 +1,6 @@
 
 angular.module('recipesApp')
-    .factory('RecipeSvc', ['$http', function($http) {
+    .factory('RecipeService', ['$http', function($http) {
 
     function getRecipes(callback) {
         $http({method: 'GET', url: 'api/v1/recipes'}).
