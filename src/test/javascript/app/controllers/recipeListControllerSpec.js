@@ -29,7 +29,7 @@ describe('Unit: RecipeListController', function() {
 
     it('should get the list of recipes right away', function() {
         httpBackend.expectGET('api/v1/recipes').respond(200, sampleData);
-        httpBackend.flush();
+        httpBackend.flush(); // fulfills the promise requested by the controller when we constructed it in the beforeEach
         expect(scope.recipes).toEqual(sampleData);
     });
 });
