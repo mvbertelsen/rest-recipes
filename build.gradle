@@ -1,8 +1,13 @@
+plugins {
+    id "com.eriwen.gradle.js" version "1.12.1"
+}
+
 apply plugin: 'java'
 apply plugin: 'groovy'
 apply plugin: 'war'
 apply plugin: 'idea'
 apply plugin: 'jetty'
+
 
 repositories {
     mavenCentral()
@@ -45,6 +50,25 @@ sourceSets {
     }
 }
 
+javascript.source {
+    dev {
+        js {
+            srcDir 'src'
+            include 'main/webapp/js/app/**/*.js', 'test/javascript/**/*.js'
+        }
+    }
+}
+
+jshint {
+    tasks.jshint.source = javascript.source.dev.js.files
+    tasks.jshint.ignoreExitCode=false
+    tasks.jshint.outputToStdOut=true
+}
+
+task karma(type:Exec) {
+    commandLine 'node', 'node_modules/karma/bin/karma', 'start', '--single-run', 'true'
+}
+
 task functional(type: Test) {
     testClassesDir = sourceSets.functional.output.classesDir
     classpath = sourceSets.functional.runtimeClasspath
@@ -68,3 +92,4 @@ task startServer(dependsOn: classes) << {
     jettyRun.daemon = false
     jettyRun.execute()
 }
+

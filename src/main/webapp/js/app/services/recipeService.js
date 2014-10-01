@@ -4,10 +4,10 @@ angular.module('recipesApp')
 
     function getRecipes() {
         return $http({method: 'GET', url: 'api/v1/recipes'});
-    };
+    }
 
     return {
         getRecipes: getRecipes
-    }
+    };
 
 }]);
