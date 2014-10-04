@@ -41,9 +41,6 @@ test {
 
 sourceSets {
     functional {
-        // this is so the functional tests can use the same resource classes as the app
-        compileClasspath += main.output
-        runtimeClasspath += main.output
         groovy {
             srcDir 'src/functional/groovy'
         }
