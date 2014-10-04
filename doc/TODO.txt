@@ -1,7 +1,11 @@
 
-* Install gradle-compass plugin
+* Install gradle-compass plugin and use SASS for CSS
     https://github.com/robfletcher/gradle-compass
 
-* Add javascript tests - Karma/Jasmine
+* Finish REST CRUD for basic recipes in-memory
+
+* Add persistence with H2 or other persistence via JPA/Hibernate and Spring transactions.
+
+* Get it deployed on Heroku?
 
 
