@@ -4,7 +4,9 @@
 
 * Finish REST CRUD for basic recipes in-memory
 
-* Add persistence with H2 or other persistence via JPA/Hibernate and Spring transactions.
+* Add persistence with H2 or other database via JPA/Hibernate and Spring transactions.
+
+* Play with other browsers than chrome in the Karma and selenium configs
 
 * Get it deployed on Heroku?
 
