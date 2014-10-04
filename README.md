@@ -17,9 +17,10 @@ It probably won't be too hard to add the eclipse plugin to build.gradle and use 
 Useful gradle tasks:
 
 * gradle tasks - lists the tasks
+* gradle dependencies - downloads all the jars from maven central and other repos
+* gradle idea - (re)gens intellij project files if you changed the classpath/dependencies
 * gradle test - runs unit tests
 * gradle functional - runs selenium and rest client tests against the app running in a jetty server
 * gradle startServer - runs the app in jetty so you can use it (blocks)
-* gradle idea - re-gens intellij project files if you changed the classpath/dependencies
 * gradle jshint - runs jshint javascript linter
 * gradle karma - runs karma javascript tests
