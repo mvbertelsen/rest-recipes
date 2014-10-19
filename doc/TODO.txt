@@ -3,6 +3,15 @@
     https://github.com/robfletcher/gradle-compass
 
 * Finish REST CRUD for basic recipes in-memory
+** POST to collection should add an item
+** PUT to individual item should update
+** DELETE on individual item should update
+
+* Validation
+** Add resource validation layers - request, resource (structural)
+** Ensure that error responses come back with correct content type & content for request
+*** BUGS: 404 errors and 400 errors should return JSON
+** Provide a way for input validation failures to return the input with useful messages
 
 * Add persistence with H2 or other database via JPA/Hibernate and Spring transactions.
 
